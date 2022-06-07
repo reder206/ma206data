@@ -1,0 +1,3 @@
+	Not	Somewhat	Severe	Very
+Severe	32	142	63	40
+No	155	365	69	27

@@ -1,0 +1,3 @@
+	Abs	Safer	Cont
+Consistent	14	20	21
+Not 	20	12	20

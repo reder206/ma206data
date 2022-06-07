@@ -11,10 +11,10 @@ The goal of ma206data is to …
 ## Installation
 
 You can install the released version of ma206data from
-[CRAN](https://CRAN.R-project.org) with:
+[GitHub](https://github.com/danielpballer) with:
 
 ``` r
-install.packages("ma206data")
+remotes::install_github("danielpballer/ma206data")
 ```
 
 ## Example

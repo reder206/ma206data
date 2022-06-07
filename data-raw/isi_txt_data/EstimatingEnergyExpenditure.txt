@@ -1,0 +1,4 @@
+	High	Low 
+Under		10
+Win50Pct	29	10
+Over	12	12
