@@ -1,0 +1,5 @@
+	Females	Males
+Every	21	5
+Most	7	4
+Some	7	3
+Never	2	1

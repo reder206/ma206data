@@ -1,0 +1,4 @@
+	Nottoo	Pretty	Very
+Above	21	159	110
+Average	53	372	221
+Below	94	249	83

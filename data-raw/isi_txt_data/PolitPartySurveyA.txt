@@ -1,0 +1,3 @@
+	Dem	Ind	Rep
+Agree	30	25	20
+Disagree	70	75	80

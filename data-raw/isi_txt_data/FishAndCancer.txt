@@ -1,0 +1,3 @@
+	Large	Mod	Small	None
+Cancer	42	209	201	14
+NoCancr	507	2769	2420	110
