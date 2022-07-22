@@ -1,3 +1,0 @@
-	Male	Female
-Smartphone	25	30
-Basicphone	25	20

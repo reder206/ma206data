@@ -1,3 +1,0 @@
-	Inactive		Moderate	Vigorous
-HealthyAging	55	345	265
-NotHealthyAging	598	1347	844
