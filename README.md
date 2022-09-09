@@ -58,8 +58,8 @@ chap2_Coffee %>%
   aes(cups_per_week) + 
   geom_rug() + 
   geom_histogram() + 
-  ggxmean::geom_x_mean() + 
-  ggxmean::geom_x_mean_label(size = 2)
+  ggxmean::geom_x_mean() + # development package
+  ggxmean::geom_x_mean_label(size = 2) # development package
 #> `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
 ```
 
@@ -68,7 +68,7 @@ chap2_Coffee %>%
 ``` r
 
 last_plot() + 
-  ggsample::facet_bootstrap(n_facets = 16) 
+  ggsample::facet_bootstrap(n_facets = 16) # development package
 #> `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
 ```
 
@@ -92,7 +92,7 @@ chap10_DraftLottery %>%
 ``` r
 
 last_plot() + 
-  ggsample::facet_scramble()
+  ggsample::facet_scramble() # development package
 #> `geom_smooth()` using method = 'loess' and formula 'y ~ x'
 ```
 

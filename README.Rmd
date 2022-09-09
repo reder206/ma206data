@@ -38,11 +38,11 @@ chap2_Coffee %>%
   aes(cups_per_week) + 
   geom_rug() + 
   geom_histogram() + 
-  ggxmean::geom_x_mean() + 
-  ggxmean::geom_x_mean_label(size = 2)
+  ggxmean::geom_x_mean() + # development package
+  ggxmean::geom_x_mean_label(size = 2) # development package
 
 last_plot() + 
-  ggsample::facet_bootstrap(n_facets = 16) 
+  ggsample::facet_bootstrap(n_facets = 16) # development package
 
 chap10_DraftLottery %>% 
   data.frame() %>% 
@@ -54,7 +54,7 @@ chap10_DraftLottery %>%
   geom_smooth()
 
 last_plot() + 
-  ggsample::facet_scramble()
+  ggsample::facet_scramble() # development package
 ```
 
 # We managed the project by doing the following
