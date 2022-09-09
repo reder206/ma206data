@@ -18,37 +18,90 @@ knitr::opts_chunk$set(
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of ma206data is to ...
-
-## Installation
-
-You can install the released version of ma206data from [GitHub](https://github.com/danielpballer) with:
+The goal of ma206data is to make the Introduction to Statistical Investigations, Edition II datasets quickly accessible in R.
 
 ``` r
-remotes::install_github("danielpballer/ma206data")
+remotes::install_github("EvaMaeRey/ma206data")
 ```
 
-## Example
-
-This is a basic example which shows you how to solve a common problem:
+## Here are some datasets made easily available and ready to explore!
 
 ```{r example}
+library(tidyverse)
 library(ma206data)
 ## basic example code
+
+chap2_Coffee # bam chapter 2 coffee data in your workstation - rock and roll
+
+chap2_Coffee %>% 
+  ggplot() +
+  aes(cups_per_week) + 
+  geom_rug() + 
+  geom_histogram() + 
+  ggxmean::geom_x_mean() + 
+  ggxmean::geom_x_mean_label(size = 2)
+
+last_plot() + 
+  ggsample::facet_bootstrap(n_facets = 16) 
+
+chap10_DraftLottery %>% 
+  data.frame() %>% 
+  ggplot() + 
+  aes(x = sequential_date,
+      y = draft_number) + 
+  geom_point() + 
+  geom_density2d_filled(alpha = .2) + 
+  geom_smooth()
+
+last_plot() + 
+  ggsample::facet_scramble()
 ```
 
-What is special about using `README.Rmd` instead of just `README.md`? You can include R chunks like so:
+# We managed the project by doing the following
 
-```{r cars}
-summary(cars)
+## ISI data
+
+- scraping http://www.isi-stats.com/isi2nd/data.html for .txt files, saving them in "isi_txt_data"
+- reading those files into r
+- saving an .rda file
+
+This was accomplished in "./data-raw/scrape_and_prep_isi_ed2.R".  We quote the code here:
+
+```{r, echo=F}
+scrape_and_prep_isi_ed2_script <- readLines("./data-raw/scrape_and_prep_isi_ed2.R")
 ```
 
-You'll still need to render `README.Rmd` regularly, to keep `README.md` up-to-date. `devtools::build_readme()` is handy for this. You could also use GitHub Actions to re-render `README.Rmd` every time you push. An example workflow can be found here: <https://github.com/r-lib/actions/tree/master/examples>.
+```{r, code = scrape_and_prep_isi_ed2_script, eval = F}
 
-You can also embed plots, for example:
-
-```{r pressure, echo = FALSE}
-plot(pressure)
 ```
 
-In that case, don't forget to commit and push the resulting figure files, so they display on GitHub and CRAN.
+## Additional data from course director
+
+- we manually copied in additional data files used in the course into "data-raw/course_director_data"
+- read the files into R 
+- saved rda files into the data folder
+
+This is accomplished in the script, "./data-raw/prep_course_director_data.R", and the code is shown here:
+
+```{r, echo = F}
+prep_course_director_data_script <- readLines("./data-raw/prep_course_director_data.R")
+```
+
+```{r, code = prep_course_director_data_script, eval = F}
+
+```
+
+
+# Documentation
+
+Finally, we coordinated minimal documentation in "./data-raw/write_dataset_minimal_documentation.R"
+
+The code is quoted here:
+
+
+```{r, echo = F}
+write_dataset_minimal_documentation_script <- readLines("./data-raw/write_dataset_minimal_documentation.R")
+```
+
+```{r, code = write_dataset_minimal_documentation_script, eval = F}
+```
